@@ -90,33 +90,33 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-5">
                 <div>
                   <label className="block text-white/60 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">First Name *</label>
-                  <input type="text" placeholder="Enter your first name" className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
+                  <input type="text" placeholder="Enter your first name" required className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
                 </div>
                 <div>
                   <label className="block text-white/60 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">Last Name *</label>
-                  <input type="text" placeholder="Enter your last name" className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
+                  <input type="text" placeholder="Enter your last name" required className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
                 </div>
               </div>
 
               <div>
                 <label className="block text-white/60 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">Email Address *</label>
-                <input type="email" placeholder="Enter your email address" className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
+                  <input type="email" placeholder="Enter your email address" required className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
               </div>
 
               <div>
                 <label className="block text-white/60 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">Phone Number</label>
-                <input type="tel" placeholder="Enter your phone number" className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
+                  <input type="tel" placeholder="Enter your phone number" required className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
               </div>
 
               <div>
                 <label className="block text-white/60 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">Property Type</label>
-                <select className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white/60 text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20 appearance-none cursor-pointer">
-                  <option>Select Property Type</option>
-                  <option>House</option>
-                  <option>Apartment</option>
-                  <option>Commercial</option>
-                  <option>Villa</option>
-                </select>
+                  <select required className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white/60 text-xs sm:text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20 appearance-none cursor-pointer">
+                    <option>Select Property Type</option>
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Commercial</option>
+                    <option>Villa</option>
+                  </select>
               </div>
 
               <div>
