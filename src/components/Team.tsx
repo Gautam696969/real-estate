@@ -69,7 +69,7 @@ const Team = () => {
             >
               <div className="relative overflow-hidden rounded-2xl bg-dark-300 border border-white/5 group transition-all duration-500 hover:border-gold-600/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
                 <div className="relative overflow-hidden">
-                  <img src={member.image} alt={member.name} className="w-full h-64 sm:h-72 md:h-[360px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img src={member.image} alt={member.name} className="w-full h-88 sm:h-80 md:h-[360px] object-cover transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-500/95 via-dark-500/20 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
                     <h3 className="text-lg sm:text-xl font-bold text-white mb-1">{member.name}</h3>
