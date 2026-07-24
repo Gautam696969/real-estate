@@ -1,4 +1,14 @@
+import { useState } from 'react';
+
 const Contact = () => {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 4000);
+  };
+
   return (
     <section className="py-20 pt-15 bg-dark-100 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-600/30 to-transparent"></div>
@@ -76,7 +86,7 @@ const Contact = () => {
           </div>
 
           <div className="bg-dark-200/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 border border-white/5 transition-all duration-500 hover:border-gold-600/30">
-            <form className="space-y-3 sm:space-y-4 md:space-y-5">
+            <form className="space-y-3 sm:space-y-4 md:space-y-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-5">
                 <div>
                   <label className="block text-white/60 text-xs sm:text-sm font-medium mb-1.5 sm:mb-2">First Name *</label>
@@ -121,6 +131,20 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {showToast && (
+        <div className="fixed top-4 right-4 z-[9999]">
+          <div className="bg-dark-200/95 backdrop-blur-xl border border-gold-600/30 rounded-xl p-4 shadow-[0_10px_40px_rgba(0,0,0,0.4)] flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-gold-600/20 border border-gold-600/30 flex items-center justify-center flex-shrink-0">
+              <i className="fa fa-check text-gold-600 text-lg"></i>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold text-sm">Message Sent!</h4>
+              <p className="text-white/60 text-xs">We will get back to you within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
