@@ -33,23 +33,23 @@ const Services = () => {
           <p className="text-white/40 text-base max-w-2xl mx-auto">Comprehensive real estate solutions tailored to your needs.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-10">
           {services.map((service, index) => (
             <div
               key={service.id}
               className="aos-init opacity-0 translate-y-[30px] transition-all duration-700 ease-out group"
               style={{ transitionDelay: `${(index + 1) * 0.15}s` }}
             >
-              <div className="bg-dark-200/80 backdrop-blur-s m border border-white/5 rounded-2xl p-8 h-full transition-all duration-500 hover:border-gold-600/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:-translate-y-1">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-600/20 to-gold-700/10 border border-gold-600/20 flex items-center justify-center mb-6 group-hover:from-gold-600/30 group-hover:to-gold-700/20 transition-all duration-500">
-                  <i className={`${service.icon} text-2xl text-gold-600`}></i>
-                </div>
-                <h4 className="text-xl font-bold text-white mb-3">{service.title}</h4>
-                <p className="text-white/50 leading-relaxed text-base mb-6">{service.description}</p>
-                <a href="#" className="inline-flex items-center gap-2 text-gold-600 text-sm font-semibold transition-all duration-300 group-hover:gap-3">
-                  Learn More <i className="fa fa-long-arrow-right"></i>
-                </a>
-              </div>
+               <div className="bg-dark-200/80 backdrop-blur-s m border border-white/5 rounded-2xl p-6 sm:p-8 h-full transition-all duration-500 hover:border-gold-600/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:-translate-y-1">
+                 <div className="w-12 sm:w-16 h-12 sm:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-gold-600/20 to-gold-700/10 border border-gold-600/20 flex items-center justify-center mb-4 sm:mb-6 group-hover:from-gold-600/30 group-hover:to-gold-700/20 transition-all duration-500">
+                   <i className={`${service.icon} text-xl sm:text-2xl text-gold-600`}></i>
+                 </div>
+                 <h4 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{service.title}</h4>
+                 <p className="text-white/50 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">{service.description}</p>
+                 <a href="#" className="inline-flex items-center gap-2 text-gold-600 text-xs sm:text-sm font-semibold transition-all duration-300 group-hover:gap-3">
+                   Learn More <i className="fa fa-long-arrow-right"></i>
+                 </a>
+               </div>
             </div>
           ))}
         </div>
