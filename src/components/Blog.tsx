@@ -49,7 +49,7 @@ const Blog = () => {
           <p className="text-white/50 text-base mt-3 max-w-2xl mx-auto">Stay updated with the latest real estate insights and property listings.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-stretch">
           {posts.map((post, index) => (
             <div
               key={post.id}
@@ -59,25 +59,25 @@ const Blog = () => {
               <div className="bg-dark-200/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/5 transition-all duration-500 hover:border-gold-600/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:-translate-y-1 group h-full flex flex-col">
                 <a href="#" className="block overflow-hidden">
                   <div className="overflow-hidden relative">
-                    <img src={post.image} alt={post.title} className="w-full h-[240px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img src={post.image} alt={post.title} className="w-full h-48 sm:h-[240px] object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-dark-500/50 to-transparent"></div>
                   </div>
                 </a>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex items-center gap-3 text-sm text-white/40 mb-3">
-                    <span><i className="fa fa-calendar mr-1.5"></i>{post.date}</span>
+                <div className="p-4 sm:p-6 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-white/40 mb-2 sm:mb-3">
+                    <span><i className="fa fa-calendar mr-1 sm:mr-1.5"></i>{post.date}</span>
                     <span className="w-1 h-1 rounded-full bg-white/20"></span>
-                    <span><i className="fa fa-user mr-1.5"></i>{post.author.name}</span>
+                    <span><i className="fa fa-user mr-1 sm:mr-1.5"></i>{post.author.name}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white leading-snug mb-3 transition-colors duration-300 hover:text-gold-600">
+                  <h3 className="text-base sm:text-lg font-bold text-white leading-snug mb-2 sm:mb-3 transition-colors duration-300 hover:text-gold-600">
                     <a href="#">{post.title}</a>
                   </h3>
-                  <p className="text-white/50 text-sm leading-relaxed mb-4 flex-grow">{post.excerpt}</p>
-                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                    <a href="#" className="text-gold-600 text-sm font-semibold transition-all duration-300 hover:text-white inline-flex items-center gap-1 group-hover:gap-2">
+                  <p className="text-white/50 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 flex-grow">{post.excerpt}</p>
+                  <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-white/5">
+                    <a href="#" className="text-gold-600 text-xs sm:text-sm font-semibold transition-all duration-300 hover:text-white inline-flex items-center gap-1 group-hover:gap-2">
                       Read More <i className="fa fa-arrow-right"></i>
                     </a>
-                    <div className="flex items-center gap-3 text-white/40 text-sm">
+                    <div className="flex items-center gap-2 sm:gap-3 text-white/40 text-xs sm:text-sm">
                       <span><i className="fa fa-heart mr-1"></i>24</span>
                       <span><i className="fa fa-comment mr-1"></i>12</span>
                     </div>
