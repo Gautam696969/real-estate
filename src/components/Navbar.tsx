@@ -38,7 +38,7 @@ const Navbar = () => {
           <nav className="hidden lg:flex items-center">
             <ul className="flex items-center gap-4 sm:gap-6">
               <li><a href="#" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Home</a></li>
-              <li><a href="#" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">About</a></li>
+              <li><a href="https://ravmoyaanrealty.com/about-us.php" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">About</a></li>
               <li
                 className="relative"
                 onMouseEnter={() => setPropertyOpen(true)}
@@ -96,7 +96,7 @@ const Navbar = () => {
 
       <div className={`lg:hidden fixed top-[70px] sm:top-[80px] left-0 w-full bg-dark-500/95 backdrop-blur-xl p-4 sm:p-5 transition-all duration-300 z-[999] border-b border-white/5 ${mobileOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-[120%] opacity-0 invisible'}`}>
         <ul className="flex flex-col items-start gap-3 sm:gap-4">
-          <li><a href="https://ravmoyaanrealty.com/index.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Home</a></li>
+          <li><a href="#" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Home</a></li>
           <li><a href="https://ravmoyaanrealty.com/about-us.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">About</a></li>
           <li className="w-full">
             <a href="https://ravmoyaanrealty.com/buy-property.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Property</a>
