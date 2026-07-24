@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-50: #fffde7;
+  --color-gold-100: #fff9c4;
+  --color-gold-200: #fff59d;
+  --color-gold-300: #fff176;
+  --color-gold-400: #ffca28;
+  --color-gold-500: #ffc107;
+  --color-gold-600: #ffb300;
+  --color-gold-700: #ffa000;
+  --color-gold-800: #ff8f00;
+  --color-gold-900: #ff6f00;
+
+  --color-dark-50: #2a2a2a;
+  --color-dark-100: #1e1e1e;
+  --color-dark-200: #1a1a1a;
+  --color-dark-300: #161616;
+  --color-dark-400: #121212;
+  --color-dark-500: #0d0d0d;
+  --color-dark-600: #0a0a0a;
+  --color-dark-700: #050505;
+  --color-dark-800: #000000;
+
+  --color-accent-blue: #0d6efd;
+  --color-accent-blue-hover: #084298;
+  --color-text-main: #ffffff;
+  --color-text-muted: #a0a0a0;
+  --color-border-custom: #333333;
+
+  --font-family-lato: "Lato", sans-serif;
+  --font-family-montserrat: "Montserrat", sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    outline: none;
+  }
+
+  ::selection {
+    background: #ffb300;
+    color: #0d0d0d;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0d0d0d;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ffb300;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffa000;
+  }
+}
+
+@utility gold-gradient {
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #ffb300, #ffa000, #ff8f00, #ffb300);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes blink {
+  0%, 92%, 100% { height: 16px; }
+  94%, 96% { height: 2px; }
+}
+
+@keyframes lookAround {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(3px, 1px); }
+  40%  { transform: translate(-2px, 1px); }
+  60%  { transform: translate(2px, -1px); }
+  80%  { transform: translate(-2px, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.aos-init {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease-out;
+}
+.aos-init.aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
