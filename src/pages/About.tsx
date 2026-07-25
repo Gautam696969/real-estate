@@ -85,18 +85,17 @@ function About() {
     <div className="app-wrapper">
       <Navbar />
       <main>
-        <section className="relative py-24 pt-32 bg-dark-100 overflow-hidden">
+        <section className="relative py-24 pt-32 overflow-hidden">
+          <img src="https://ravmoyaanrealty.com/images/bg/bg-testimonials-2.jpg" alt="Testimonials Background" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-dark-100/50"></div>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-600/30 to-transparent"></div>
-          <div className="max-w-[1200px] mx-auto px-5">
+          <div className="max-w-[1200px] mx-auto px-5 relative z-10">
             <div className="text-center mb-14">
-              <div className="inline-block px-4 py-1.5 bg-gold-600/10 border border-gold-600/20 rounded-full text-gold-600 text-xs font-semibold uppercase tracking-widest mb-3 backdrop-blur-sm">
-                About Us
-              </div>
-              <h1 className="text-[2.5rem] font-bold text-white capitalize">About Our Company</h1>
-              <div className="flex items-center justify-center gap-2 text-white/40 text-sm mt-4">
-                <a href="/" className="hover:text-gold-600 transition-colors">Home</a>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white capitalize">About Our Company</h1>
+              <div className="flex items-center justify-center gap-2 text-white/50 text-sm mt-4">
+                <a href="/" className="hover:text-gold-600 transition-colors text-white/80">Home</a>
                 <span>/</span>
-                <span className="text-gold-600">About Us</span>
+                <span className="text-white">About Us</span>
               </div>
             </div>
           </div>
@@ -129,8 +128,8 @@ function About() {
               </div>
               <div className="relative">
                 <img src="https://ravmoyaanrealty.com/images/bg/bg-video1.jpg" alt="About Ravmoyaan Realty" className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)]" />
-                <a href="https://youtube.com/shorts/BoVLA7CzWuw?si=F_sRnzjm711RRBkP" target="_blank" className="absolute inset-0 flex items-center justify-center rounded-2xl bg-black/30 group transition-all duration-300 hover:bg-black/40">
-                  <div className="w-16 h-16 rounded-full bg-gold-600/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <a href="#" target="_blank" className="absolute inset-0 flex items-center justify-center rounded-2xl">
+                  <div className="relative w-16 h-16 rounded-full bg-gold-600/90 flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(255,179,0,0.4)] transition-all duration-300 pulse-ring rotate-ring">
                     <i className="fa fa-play text-dark-500 text-lg ml-1"></i>
                   </div>
                 </a>
@@ -247,7 +246,7 @@ function About() {
                 Clients Testimonials
               </div>
               <h2 className="text-[2.5rem] font-bold text-white capitalize">What Our Clients Say</h2>
-              <p className="text-white/40 text-base mt-3 max-w-2xl mx-auto">We collect reviews from our customers.</p>
+              <p className="text-white text-base mt-3 max-w-2xl mx-auto">We collect reviews from our customers.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -257,7 +256,7 @@ function About() {
                   className="aos-init opacity-0 translate-y-[30px] transition-all duration-700 ease-out"
                   style={{ transitionDelay: `${(index + 1) * 0.15}s` }}
                 >
-                  <div className="bg-dark-300/80 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-500 hover:border-gold-600/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] h-full flex flex-col">
+                  <div className="bg-dark-200/90 backdrop-blur-sm rounded-2xl p-6 border border-gold-600/20 transition-all duration-500 hover:border-gold-600/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] h-full flex flex-col">
                     <div className="flex items-center gap-4 mb-5">
                       <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
                       <div>
@@ -265,7 +264,7 @@ function About() {
                         <p className="text-gold-600 text-xs">{testimonial.location}</p>
                       </div>
                     </div>
-                    <p className="text-white/50 text-sm leading-relaxed flex-1">{testimonial.text}</p>
+                    <p className="text-white/70 text-sm leading-relaxed flex-1">{testimonial.text}</p>
                   </div>
                 </div>
               ))}
