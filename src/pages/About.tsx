@@ -282,16 +282,17 @@ function About() {
               <h2 className="text-[2.5rem] font-bold text-white capitalize">The Companies That Represent Us</h2>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {partners.map((partner, index) => (
-                <div
-                  key={index}
-                  className="aos-init opacity-0 translate-y-[30px] transition-all duration-700 ease-out bg-dark-300/80 backdrop-blur-sm rounded-2xl p-6 border border-white/5 flex items-center justify-center min-h-[100px] hover:border-gold-600/30 transition-all duration-500"
-                  style={{ transitionDelay: `${(index + 1) * 0.1}s` }}
-                >
-                  <img src={partner} alt={`Partner ${index + 1}`} className="h-12 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              ))}
+            <div className="relative overflow-hidden">
+              <div className="flex animate-marquee">
+                {partners.concat(partners).map((partner, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 bg-dark-200/80 backdrop-blur-sm rounded-2xl p-6 border border-white/5 flex items-center justify-center min-h-[100px] mx-4 hover:border-gold-600/30 transition-all duration-500"
+                  >
+                    <img src={partner} alt={`Partner ${index + 1}`} className="h-12 object-contain opacity-80 hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
