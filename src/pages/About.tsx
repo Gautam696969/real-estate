@@ -173,21 +173,41 @@ function About() {
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-gold-600 mb-2">300</div>
-                <div className="text-white/50 text-sm uppercase tracking-wider">Sold Houses</div>
+              <div className="text-center flex flex-col items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
+                  <i className="fa fa-home text-5xl text-gold-600"></i>
+                  <div className="text-left">
+                    <div className="text-4xl sm:text-5xl font-bold text-gold-600">300</div>
+                    <div className="text-white/50 text-sm uppercase tracking-wider">Sold Houses</div>
+                  </div>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-gold-600 mb-2">400</div>
-                <div className="text-white/50 text-sm uppercase tracking-wider">Daily Listings</div>
+              <div className="text-center flex flex-col items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
+                  <i className="fa fa-list text-5xl text-gold-600"></i>
+                  <div className="text-left">
+                    <div className="text-4xl sm:text-5xl font-bold text-gold-600">400</div>
+                    <div className="text-white/50 text-sm uppercase tracking-wider">Daily Listings</div>
+                  </div>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-gold-600 mb-2">250</div>
-                <div className="text-white/50 text-sm uppercase tracking-wider">Expert Agents</div>
+              <div className="text-center flex flex-col items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
+                  <i className="fa fa-users text-5xl text-gold-600"></i>
+                  <div className="text-left">
+                    <div className="text-4xl sm:text-5xl font-bold text-gold-600">250</div>
+                    <div className="text-white/50 text-sm uppercase tracking-wider">Expert Agents</div>
+                  </div>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-gold-600 mb-2">200</div>
-                <div className="text-white/50 text-sm uppercase tracking-wider">Won Awards</div>
+              <div className="text-center flex flex-col items-center gap-3">
+                <div className="flex items-center justify-center gap-3">
+                  <i className="fa fa-trophy text-5xl text-gold-600"></i>
+                  <div className="text-left">
+                    <div className="text-4xl sm:text-5xl font-bold text-gold-600">200</div>
+                    <div className="text-white/50 text-sm uppercase tracking-wider">Won Awards</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
