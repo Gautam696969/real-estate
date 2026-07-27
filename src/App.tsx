@@ -4,6 +4,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import BuyProperty from './pages/BuyProperty';
 import SellProperty from './pages/SellProperty';
+import Gallery from './pages/Gallery';
 import ContactPage from './pages/Contact';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path="/services" element={<Services />} />
       <Route path="/buy-property" element={<BuyProperty />} />
       <Route path="/sell-property" element={<SellProperty />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="/contact" element={<ContactPage />} />
     </Routes>
   );
