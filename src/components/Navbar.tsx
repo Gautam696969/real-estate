@@ -64,7 +64,7 @@ const Navbar = () => {
               </li>
               <li><Link to="/services" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Services</Link></li>
               <li><Link to="/gallery" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Gallery</Link></li>
-              <li><a href="https://ravmoyaanrealty.com/blog.php" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Blog</a></li>
+              <li><Link to="/blogs" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Blog</Link></li>
               <li><Link to="/contact" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Contact</Link></li>
             </ul>
           </nav>
@@ -116,7 +116,7 @@ const Navbar = () => {
           </li>
           <li><Link to="/services" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Services</Link></li>
           <li><Link to="/gallery" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Gallery</Link></li>
-          <li><a href="https://ravmoyaanrealty.com/blog.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Blog</a></li>
+          <li><Link to="/blogs" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Blog</Link></li>
           <li><Link to="/contact" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Contact</Link></li>
           <li className="pt-2 border-t border-white/5 mt-2">
             <a href="https://ravmoyaanrealty.com/login-register.php" className="text-gold-600 text-sm font-medium uppercase tracking-wide hover:text-gold-500 transition-colors">Sign In / Register</a>

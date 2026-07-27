@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
     <footer className="relative">
@@ -42,7 +44,7 @@ const Footer = () => {
                   <li><a href="https://ravmoyaanrealty.com/about-us.php" className="text-white/50 text-xs sm:text-base transition-all duration-300 hover:text-gold-600 hover:pl-1">About</a></li>
                   <li><a href="https://ravmoyaanrealty.com/services.php" className="text-white/50 text-xs sm:text-base transition-all duration-300 hover:text-gold-600 hover:pl-1">Services</a></li>
                   <li><a href="https://ravmoyaanrealty.com/gallery.php" className="text-white/50 text-xs sm:text-base transition-all duration-300 hover:text-gold-600 hover:pl-1">Gallery</a></li>
-                  <li><a href="https://ravmoyaanrealty.com/blog.php" className="text-white/50 text-xs sm:text-base transition-all duration-300 hover:text-gold-600 hover:pl-1">Blog</a></li>
+                  <li><Link to="/blogs" className="text-white/50 text-xs sm:text-base transition-all duration-300 hover:text-gold-600 hover:pl-1">Blog</Link></li>
                 </ul>
                 <ul className="space-y-2 sm:space-y-3">
                   <li><a href="https://ravmoyaanrealty.com/faq.php" className="text-white/50 text-xs sm:text-base transition-all duration-300 hover:text-gold-600 hover:pl-1">FAQ</a></li>
