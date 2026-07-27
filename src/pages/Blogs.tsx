@@ -4,12 +4,6 @@ import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 import { useState } from 'react';
 
-const properties = [
-  { id: 1, type: 'For Rent', price: '$623,000', title: 'Luxury House in New York', area: '720 sq ft', rooms: '6', beds: '2', baths: '3', image: 'https://ravmoyaanrealty.com/images/feature-properties/fp-7.jpg' },
-  { id: 2, type: 'For Rent', price: '$6,500', title: 'Villa House in Los Angeles', area: '720 sq ft', rooms: '6', beds: '2', baths: '3', image: 'https://ravmoyaanrealty.com/images/feature-properties/fp-8.jpg' },
-  { id: 3, type: 'For Rent', price: '$230,000', title: 'Family House in San Francisco', area: '720 sq ft', rooms: '6', beds: '2', baths: '3', image: 'https://ravmoyaanrealty.com/images/feature-properties/fp-9.jpg' },
-];
-
 const blogPosts = [
   {
     id: 1,
