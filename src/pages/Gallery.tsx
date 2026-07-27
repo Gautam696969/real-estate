@@ -55,18 +55,18 @@ function Gallery() {
                   className="aos-init opacity-0 translate-y-[30px] transition-all duration-700 ease-out group bg-dark-300/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/5 hover:border-gold-600/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500"
                   style={{ transitionDelay: `${(index + 1) * 0.1}s` }}
                 >
-                  <div className="relative overflow-hidden">
-                    <img src={property.image} alt={property.title} className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-500/90 via-transparent to-transparent"></div>
+                  <div className="relative overflow-hidden h-72">
+                    <img src={property.image} alt={property.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-500/40 to-transparent"></div>
                     <div className="absolute top-3 left-3">
                       <span className="inline-block px-3 py-1 bg-gold-600 text-dark-500 text-xs font-semibold uppercase rounded-full">{property.type}</span>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-dark-500 via-dark-500/80 to-transparent">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-dark-900 via-dark-900/80 to-transparent transition-transform duration-300 hover:-translate-y-2">
                       <h3 className="text-lg font-bold text-white">{property.title}</h3>
                       <p className="text-gold-600 font-semibold text-sm">{property.price}</p>
                     </div>
                   </div>
-                  <div className="p-4 border-t border-white/5">
+                  <div className="p-4 border-t border-white/3">
                     <div className="grid grid-cols-2 gap-2 text-center">
                       <div className="flex items-center justify-center gap-2 text-white/50 text-xs">
                         <i className="fa fa-expand text-gold-600"></i>
