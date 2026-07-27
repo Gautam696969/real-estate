@@ -1,12 +1,15 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [propertyOpen, setPropertyOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
- const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,36 +31,41 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScroll]);
 
+  const handleHomeClick = () => {
+    navigate('/');
+    setMobileOpen(false);
+  };
+
   return (
     <nav className={`fixed top-0 left-0 w-full bg-dark-400/40 backdrop-blur-xl z-[1000] border-b border-white/5 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 flex justify-between items-center h-[70px] sm:h-[80px]">
         <div className="flex items-center gap-4 sm:gap-6">
-          <a href="#">
+          <a href="#" onClick={(e) => { e.preventDefault(); handleHomeClick(); }}>
             <img src="https://ravmoyaanrealty.com/images/myedit/main-logo-yellow.png" alt="Ravmoyaan Realty" className="h-[40px] sm:h-[50px] w-auto" />
           </a>
           <nav className="hidden lg:flex items-center">
             <ul className="flex items-center gap-4 sm:gap-6">
-              <li><a href="#" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Home</a></li>
-              <li><a href="https://ravmoyaanrealty.com/about-us.php" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">About</a></li>
+              <li><Link to="/" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Home</Link></li>
+              <li><Link to="/about" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">About</Link></li>
               <li
                 className="relative"
                 onMouseEnter={() => setPropertyOpen(true)}
                 onMouseLeave={() => setPropertyOpen(false)}
               >
-                <a href="#" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300 flex items-center">
+                <Link to="/buy-property" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300 flex items-center">
                   Property
                   <ChevronDown size={12} className="ml-1" />
-                </a>
+                </Link>
                 <ul className={`absolute top-full left-0 bg-dark-200/95 backdrop-blur-xl min-w-[200px] py-2.5 transition-all duration-300 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] border border-white/5 z-50 ${propertyOpen ? 'opacity-100 visible translate-y-2' : 'opacity-0 invisible translate-y-0'}`}>
-                  <li><a href="https://ravmoyaanrealty.com/buy-property.php" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Buy Property</a></li>
-                  <li><a href="https://ravmoyaanrealty.com/sell-property.php" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Sell Property</a></li>
-                  <li><a href="https://ravmoyaanrealty.com/rent-property.php" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Rent Property</a></li>
+                  <li><Link to="/buy-property" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Buy Property</Link></li>
+                  <li><Link to="/sell-property" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Sell Property</Link></li>
+                  <li><Link to="/rent-property" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Rent Property</Link></li>
                 </ul>
               </li>
-              <li><a href="https://ravmoyaanrealty.com/services.php" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Services</a></li>
-              <li><a href="https://ravmoyaanrealty.com/gallery.php" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Gallery</a></li>
-              <li><a href="https://ravmoyaanrealty.com/blog.php" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Blog</a></li>
-              <li><a href="https://ravmoyaanrealty.com/contact.php" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Contact</a></li>
+              <li><Link to="/services" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Services</Link></li>
+              <li><Link to="/gallery" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Gallery</Link></li>
+              <li><Link to="/blogs" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Blog</Link></li>
+              <li><Link to="/contact" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -96,20 +104,20 @@ const Navbar = () => {
 
       <div className={`lg:hidden fixed top-[70px] sm:top-[80px] left-0 w-full bg-dark-500/95 backdrop-blur-xl p-4 sm:p-5 transition-all duration-300 z-[999] border-b border-white/5 ${mobileOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-[120%] opacity-0 invisible'}`}>
         <ul className="flex flex-col items-start gap-3 sm:gap-4">
-          <li><a href="#" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Home</a></li>
-          <li><a href="https://ravmoyaanrealty.com/about-us.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">About</a></li>
+          <li><Link to="/" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Home</Link></li>
+          <li><Link to="/about" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>About</Link></li>
           <li className="w-full">
-            <a href="https://ravmoyaanrealty.com/buy-property.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Property</a>
+            <Link to="/buy-property" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Property</Link>
             <ul className="ml-4 mt-2 space-y-2">
-              <li><a href="https://ravmoyaanrealty.com/buy-property.php" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors">Buy Property</a></li>
-              <li><a href="https://ravmoyaanrealty.com/sell-property.php" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors">Sell Property</a></li>
-              <li><a href="https://ravmoyaanrealty.com/rent-property.php" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors">Rent Property</a></li>
+              <li><Link to="/buy-property" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Buy Property</Link></li>
+              <li><Link to="/sell-property" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Sell Property</Link></li>
+              <li><Link to="/rent-property" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Rent Property</Link></li>
             </ul>
           </li>
-          <li><a href="https://ravmoyaanrealty.com/services.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Services</a></li>
-          <li><a href="https://ravmoyaanrealty.com/gallery.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Gallery</a></li>
-          <li><a href="https://ravmoyaanrealty.com/blog.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Blog</a></li>
-          <li><a href="https://ravmoyaanrealty.com/contact.php" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Contact</a></li>
+          <li><Link to="/services" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Services</Link></li>
+          <li><Link to="/gallery" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Gallery</Link></li>
+          <li><Link to="/blogs" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors">Blog</Link></li>
+          <li><Link to="/contact" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Contact</Link></li>
           <li className="pt-2 border-t border-white/5 mt-2">
             <a href="https://ravmoyaanrealty.com/login-register.php" className="text-gold-600 text-sm font-medium uppercase tracking-wide hover:text-gold-500 transition-colors">Sign In / Register</a>
           </li>
