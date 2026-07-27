@@ -26,7 +26,7 @@ function RentProperty() {
       <main>
         <section className="breadcrumb-outer py-20 pt-32 relative min-h-[500px]">
           <img src="https://ravmoyaanrealty.com/images/bg/home-171.jpg" alt="Rent Property Background" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-dark-100/40"></div>
+          <div className="absolute inset-0 bg-dark-200/10"></div>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-600/30 to-transparent"></div>
           <div className="max-w-[1200px] mx-auto px-5 relative z-10">
             <div className="detail-title">
