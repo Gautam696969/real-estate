@@ -28,7 +28,7 @@ const blogPosts = [
     date: 'May 20, 2020',
     excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ipsum dolor sit amet, consectetur Real Estate News.',
     image: 'https://ravmoyaanrealty.com/images/blog/b-2.jpg',
-    author: { name: 'Sourav Mukherjee', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-1.jpg' },
+    author: { name: 'Sourav Mukherjee', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-2.jpg' },
     likes: 18,
     comments: 9,
     shares: 5,
@@ -39,7 +39,7 @@ const blogPosts = [
     date: 'Jun 30, 2020',
     excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ipsum dolor sit amet, consectetur Real Estate News.',
     image: 'https://ravmoyaanrealty.com/images/blog/b-3.jpg',
-    author: { name: 'Ankita Ghosh', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-1.jpg' },
+    author: { name: 'Ankita Ghosh', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-3.jpg' },
     likes: 31,
     comments: 15,
     shares: 10,
@@ -50,7 +50,7 @@ const blogPosts = [
     date: 'Jul 15, 2020',
     excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ipsum dolor sit amet, consectetur Real Estate News.',
     image: 'https://ravmoyaanrealty.com/images/blog/b-4.jpg',
-    author: { name: 'Sourav Mukherjee', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-1.jpg' },
+    author: { name: 'Sourav Mukherjee', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-4.jpg' },
     likes: 15,
     comments: 7,
     shares: 4,
@@ -61,7 +61,7 @@ const blogPosts = [
     date: 'Aug 01, 2020',
     excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ipsum dolor sit amet, consectetur Real Estate News.',
     image: 'https://ravmoyaanrealty.com/images/blog/b-5.jpg',
-    author: { name: 'Ankita Ghosh', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-1.jpg' },
+    author: { name: 'Ankita Ghosh', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-5.jpg' },
     likes: 22,
     comments: 11,
     shares: 6,
@@ -72,7 +72,7 @@ const blogPosts = [
     date: 'Sep 10, 2020',
     excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ipsum dolor sit amet, consectetur Real Estate News.',
     image: 'https://ravmoyaanrealty.com/images/blog/b-6.jpg',
-    author: { name: 'Sourav Mukherjee', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-1.jpg' },
+    author: { name: 'Sourav Mukherjee', image: 'https://ravmoyaanrealty.com/images/testimonials/ts-6.jpg' },
     likes: 27,
     comments: 13,
     shares: 9,
@@ -91,9 +91,9 @@ const sidebarPages = [
 const popularTags = ['Houses', 'Real Home', 'Baths', 'Beds', 'Garages', 'Family', 'Real Estates', 'Properties', 'Location', 'Price'];
 
 const recentPosts = [
-  { title: '74 Paddock St, Montgomery', date: 'April 11, 2020', image: 'https://ravmoyaanrealty.com/images/rvm/fi7.png' },
-  { title: '1505 Plymouth Cir, Carpentersville', date: 'May 20, 2020', image: 'https://ravmoyaanrealty.com/images/rvm/fi8.png' },
-  { title: '456 Walnut Ave #2, Elgin', date: 'Jun 30, 2020', image: 'https://ravmoyaanrealty.com/images/rvm/fi9.png' },
+  { title: 'REAL ESTATE NEWS', date: 'April 11, 2020', image: 'https://ravmoyaanrealty.com/images/blog/b-1.jpg' },
+  { title: 'REAL ESTATE NEWS', date: 'May 20, 2020', image: 'https://ravmoyaanrealty.com/images/blog/b-2.jpg' },
+  { title: 'REAL ESTATE NEWS', date: 'Jun 30, 2020', image: 'https://ravmoyaanrealty.com/images/blog/b-3.jpg' },
 ];
 
 function BlogCard({ post, index }: { post: typeof blogPosts[0]; index: number }) {
@@ -112,7 +112,9 @@ function BlogCard({ post, index }: { post: typeof blogPosts[0]; index: number })
         <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-white/40 mb-2 sm:mb-3">
           <span><i className="fa fa-calendar mr-1 sm:mr-1.5"></i>{post.date}</span>
           <span className="w-1 h-1 rounded-full bg-white/20"></span>
-          <span><i className="fa fa-user mr-1 sm:mr-1.5"></i>{post.author.name}</span>
+         <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full overflow-hidden border border-white/10">
+            <img src={post.author.image} alt={post.author.name} className="w-full h-full object-cover" />
+          </div> <span>{post.author.name}</span>
         </div>
         <h3 className="text-base sm:text-lg font-bold text-white leading-snug mb-2 sm:mb-3 transition-colors duration-300 hover:text-gold-600">
           <a href="#">{post.title}</a>
@@ -189,7 +191,7 @@ function SidebarWidget() {
               </a>
               <div className="min-w-0">
                 <a href="#"><h6 className="text-white text-xs sm:text-sm font-semibold leading-snug mb-1 overflow-hidden" style={{ maxHeight: '2.5rem' }}>{post.title}</h6></a>
-                <p className="text-white/40 text-xs">{post.date}</p>
+                <p className="text-white/40 text-l">{post.date}</p>
               </div>
             </div>
           ))}
@@ -216,7 +218,7 @@ function Blogs() {
                 Blog
               </div>
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white capitalize">Our Blog</h1>
-              <div className="flex items-center justify-center gap-2 text-white/50 text-sm mt-4">
+              <div className="flex items-center justify-left gap-2 text-white/50 text-sm mt-2">
                 <a href="/" className="hover:text-gold-600 transition-colors text-white/70">Home</a>
                 <span>/</span>
                 <span className="text-gold-600">Blog</span>
@@ -236,7 +238,7 @@ function Blogs() {
                   ))}
                 </div>
 
-                <nav className="pt-8" aria-label="Pagination">
+                <nav className="pt-15" aria-label="Pagination">
                   <ul className="flex items-center justify-center gap-2">
                     <li>
                       <a href="#" className="px-4 py-2 bg-dark-300/80 text-white/50 text-sm rounded-xl border border-white/5 hover:border-gold-600/30 hover:text-gold-600 transition-all duration-300">
