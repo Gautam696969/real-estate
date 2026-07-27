@@ -10,116 +10,142 @@ function ContactPage() {
     <div className="app-wrapper">
       <Navbar />
       <main>
-        <section className="py-20 pt-32 bg-dark-100 relative overflow-hidden">
+        <section className="relative py-24 pt-32 bg-dark-100 overflow-hidden">
+          <img src="https://ravmoyaanrealty.com/images/bg/bg-testimonials-2.jpg" alt="Contact Background" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-dark-100/60"></div>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-600/30 to-transparent"></div>
-          <div className="max-w-[1200px] mx-auto px-5">
+          <div className="max-w-[1200px] mx-auto px-5 relative z-10">
             <div className="text-center mb-14">
               <div className="inline-block px-4 py-1.5 bg-gold-600/10 border border-gold-600/20 rounded-full text-gold-600 text-xs font-semibold uppercase tracking-widest mb-3 backdrop-blur-sm">
                 Contact Us
               </div>
-              <h2 className="text-[2.5rem] font-bold text-white capitalize">Get In Touch</h2>
-              <p className="text-white/40 text-base mt-3 max-w-2xl mx-auto">Have a question or ready to find your dream property? Fill out the form below and we'll get back to you within 24 hours.</p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              <div className="space-y-6">
-                <div className="bg-dark-200/80 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 hover:border-gold-600/30">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-600/20 to-gold-700/10 border border-gold-600/20 flex items-center justify-center flex-shrink-0">
-                      <i className="fa fa-map-marker text-gold-600 text-lg"></i>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-white mb-1">Office Location</h4>
-                      <p className="text-white/50 text-sm leading-relaxed">Chicago Illinois, USA<br />Ravmoyaan Realty Associates</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-dark-200/80 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 hover:border-gold-600/30">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-600/20 to-gold-700/10 border border-gold-600/20 flex items-center justify-center flex-shrink-0">
-                      <i className="fa fa-phone text-gold-600 text-lg"></i>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-white mb-1">Phone Number</h4>
-                      <p className="text-white/50 text-sm leading-relaxed">(224) 772 3760</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-dark-200/80 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 hover:border-gold-600/30">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-600/20 to-gold-700/10 border border-gold-600/20 flex items-center justify-center flex-shrink-0">
-                      <i className="fa fa-envelope text-gold-600 text-lg"></i>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-white mb-1">Email Address</h4>
-                      <p className="text-white/50 text-sm leading-relaxed">sourav.mukherjee@ravmoyaanrealty.com</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-dark-200/80 backdrop-blur-sm rounded-2xl p-6 border border-white/5 transition-all duration-300 hover:border-gold-600/30">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-600/20 to-gold-700/10 border border-gold-600/20 flex items-center justify-center flex-shrink-0">
-                      <i className="fa fa-clock text-gold-600 text-lg"></i>
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-bold text-white mb-3">Business Hours</h4>
-                      <div className="space-y-2">
-                        <div className="flex justify-between items-center py-2 border-b border-white/5">
-                          <span className="text-white/70 text-sm">Monday - Friday</span>
-                          <span className="text-gold-600 text-sm font-semibold">9:00 AM - 6:00 PM</span>
-                        </div>
-                        <div className="flex justify-between items-center py-2 border-b border-white/5">
-                          <span className="text-white/70 text-sm">Saturday</span>
-                          <span className="text-gold-600 text-sm font-semibold">10:00 AM - 4:00 PM</span>
-                        </div>
-                        <div className="flex justify-between items-center py-2">
-                          <span className="text-white/70 text-sm">Sunday</span>
-                          <span className="text-white/40 text-sm font-semibold">Closed</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white capitalize">Contact Us</h1>
+              <div className="flex items-center justify-left gap-2 text-white/50 text-sm mt-2">
+                <a href="/" className="hover:text-gold-600 transition-colors text-white/70">Home</a>
+                <span>/</span>
+                <span className="text-gold-600">Contact Us</span>
               </div>
+            </div>
+          </div>
+        </section>
 
-              <div className="bg-dark-200/80 backdrop-blur-sm rounded-2xl p-8 border border-white/5 transition-all duration-500 hover:border-gold-600/30">
+        <section className="py-10 bg-dark-100/80 relative overflow-hidden">
+          <h1 className="text-center text-white">Our Location</h1>
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-600/30 to-transparent"></div>
+          <div className="max-w-[1200px] mx-auto px-5">
+
+            <div className="w-full max-w-6xl mx-auto rounded-2xl overflow-hidden border border-white/10">
+              <iframe
+                src="https://www.google.com/maps?q=Chicago,Illinois,USA&output=embed"
+                className="w-full h-[350px] md:h-[400px] lg:h-[450px]"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Chicago Location Map"
+              />
+            </div>
+          </div>
+        </section>
+        <section className="py-20 bg-dark-200 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-600/30 to-transparent"></div>
+          <div className="max-w-[1200px] mx-auto px-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-6">Get In Touch</h3>
                 <form className="space-y-5">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-white/60 text-sm font-medium mb-2">First Name *</label>
-                      <input type="text" placeholder="Enter your first name" required className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
-                    </div>
-                    <div>
-                      <label className="block text-white/60 text-sm font-medium mb-2">Last Name *</label>
-                      <input type="text" placeholder="Enter your last name" required className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
-                    </div>
+                  <div>
+                    <label className="block text-white/60 text-sm font-medium mb-2">First Name *</label>
+                    <input type="text" required placeholder="Enter your first name" className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
                   </div>
                   <div>
-                    <label className="block text-white/60 text-sm font-medium mb-2">Email Address *</label>
-                    <input type="email" placeholder="Enter your email address" required className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
+                    <label className="block text-white/60 text-sm font-medium mb-2">Last Name *</label>
+                    <input type="text" required placeholder="Enter your last name" className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
                   </div>
                   <div>
-                    <label className="block text-white/60 text-sm font-medium mb-2">Phone Number *</label>
-                    <input type="tel" placeholder="Enter your phone number" required className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
+                    <label className="block text-white/60 text-sm font-medium mb-2">Email *</label>
+                    <input type="email" required placeholder="Enter your email" className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20" />
                   </div>
                   <div>
-                    <label className="block text-white/60 text-sm font-medium mb-2">Property Type</label>
-                    <select required className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white/60 text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20 appearance-none cursor-pointer">
-                      <option>Select Property Type</option>
-                      <option>House</option>
-                      <option>Apartment</option>
-                      <option>Commercial</option>
-                      <option>Villa</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-white/60 text-sm font-medium mb-2">Message</label>
-                    <textarea rows={4} placeholder="Tell us about your requirements..." className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20 resize-none"></textarea>
+                    <label className="block text-white/60 text-sm font-medium mb-2">Message *</label>
+                    <textarea rows={5} required placeholder="Tell us about your requirements..." className="w-full px-4 py-3 bg-dark-500/60 border border-white/10 rounded-xl text-white text-sm outline-none transition-all duration-300 focus:border-gold-600/50 focus:ring-1 focus:ring-gold-600/20 resize-none"></textarea>
                   </div>
                   <button type="submit" className="w-full py-3.5 bg-gradient-to-r from-gold-600 to-gold-700 text-dark-500 font-semibold rounded-xl transition-all duration-300 hover:from-gold-500 hover:to-gold-600 hover:shadow-[0_8px_25px_rgba(255,179,0,0.3)] uppercase tracking-wider text-sm">
-                    Send Message
+                    Submit
                   </button>
                 </form>
+              </div>
+
+              <div className="space-y-6">
+                <div
+                  className="relative overflow-hidden w-full min-h-[525px]"
+                  style={{
+                    backgroundImage:
+                      "url('https://ravmoyaanrealty.com/images/bg/bg-testimonials.jpg')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-[#243B6B]/85"></div>
+
+                  <div className="relative z-10 p-8">
+                    <h3 className="text-2xl font-bold text-white mb-5 uppercase">
+                      Contact Details
+                    </h3>
+
+                    <div className="w-12 h-1 bg-white mb-8"></div>
+
+                    <p className="text-white text-base leading-relaxed mb-10 max-w-md">
+                      Please find below contact details and contact us today!
+                    </p>
+
+                    <ul className="space-y-6">
+                      <li className="flex items-center gap-5">
+                        <i className="fa fa-map-marker text-white text-2xl"></i>
+                        <p className="text-white/80 text-base">
+                          Chicago Illinois, USA
+                        </p>
+                      </li>
+
+                      <li className="flex items-center gap-5">
+                        <i className="fa fa-phone text-white text-2xl"></i>
+                        <p className="text-white/80 text-base">
+                          (224) 772 3760
+                        </p>
+                      </li>
+
+                      <li className="flex items-center gap-5">
+                        <i className="fa fa-envelope text-white text-2xl"></i>
+                        <p className="text-white/80 text-base break-all">
+                          sourav.mukherjee@ravmoyaanrealty.com
+                        </p>
+                      </li>
+
+                      <li className="flex items-center gap-5">
+                        <i className="fa fa-envelope text-white text-2xl"></i>
+                        <p className="text-white/80 text-base">
+                          vish@ravmoyaanrealty.com
+                        </p>
+                      </li>
+
+                      <li className="flex items-center gap-5">
+                        <i className="fa fa-envelope text-white text-2xl"></i>
+                        <p className="text-white/80 text-base">
+                          annie@ravmoyaanrealty.com
+                        </p>
+                      </li>
+
+                      <li className="flex items-center gap-5">
+                        <i className="fa fa-clock text-white text-2xl"></i>
+                        <p className="text-white/80 text-base">
+                          8:00 a.m - 9:00 p.m
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
