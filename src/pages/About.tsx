@@ -124,7 +124,7 @@ function About() {
                 <a href="#" className="inline-flex items-center gap-2 text-gold-600 font-semibold text-sm transition-all duration-300 hover:gap-3">
                   Read More <i className="fa fa-arrow-right"></i>
                 </a>
-                <img src="https://ravmoyaanrealty.com/images/signature.png" alt="Signature" className="w-36 h-auto mt-2" />
+                <img src="https://ravmoyaanrealty.com/images/signature.png" alt="Signature" className="w-36 h-auto mt-2 bg-white " />
               </div>
               <div className="relative">
                 <img src="https://ravmoyaanrealty.com/images/bg/bg-video1.jpg" alt="About Ravmoyaan Realty" className="w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.3)]" />

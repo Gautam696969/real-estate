@@ -19,20 +19,20 @@ function ContactPage() {
               <div className="inline-block px-4 py-1.5 bg-gold-600/10 border border-gold-600/20 rounded-full text-gold-600 text-xs font-semibold uppercase tracking-widest mb-3 backdrop-blur-sm">
                 Contact Us
               </div>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white capitalize">Contact Us</h1>
-              <div className="flex items-center justify-left gap-2 text-white/50 text-sm mt-2">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white capitalize">CONTACT US</h1>
+              <div className="flex items-center justify-center gap-2 text-white/50 text-sm mt-2">
                 <a href="/" className="hover:text-gold-600 transition-colors text-white/70">Home</a>
                 <span>/</span>
-                <span className="text-gold-600">Contact Us</span>
+                <span className="text-gold-600 ">Contact Us</span>
               </div>
             </div>
           </div>
         </section>
 
         <section className="py-10 bg-dark-100/80 relative overflow-hidden">
-          <h1 className="text-center text-white">Our Location</h1>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-600/30 to-transparent"></div>
-          <div className="max-w-[1200px] mx-auto px-5">
+          <div className="max-w-[1200px] mx-auto px-5 rounded-2xl border border-white/10 bg-dark-100/90">
+            <h1 className="text-left py-5 text-2xl font-bold text-white">OUR LOCATION</h1>
 
             <div className="w-full max-w-6xl mx-auto rounded-2xl overflow-hidden border border-white/10">
               <iframe
