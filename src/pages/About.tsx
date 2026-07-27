@@ -150,7 +150,8 @@ function About() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
               <div className="bg-dark-300/80 backdrop-blur-sm rounded-2xl p-8 border border-white/5 transition-all duration-500 hover:border-gold-600/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] text-center">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-600/20 to-gold-700/10 border border-gold-600/20 flex items-center justify-center mb-6 mx-auto">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-600/20 to-gold-700/10 border border-gold-600/20 flex items-center justify-center mb-6 mx-auto gap-2">
+                  <img src="https://ravmoyaanrealty.com/images/icons/icon-12.svg" alt="icon" className="w-6 h-6" />
                   <i className="fa-solid fa-chart-line text-2xl text-gold-600"></i>
                 </div>
                 <h4 className="text-xl font-bold text-white mb-3">Strategic Market Expertise</h4>
