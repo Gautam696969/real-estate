@@ -59,7 +59,7 @@ const Navbar = () => {
                 <ul className={`absolute top-full left-0 bg-dark-200/95 backdrop-blur-xl min-w-[200px] py-2.5 transition-all duration-300 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] border border-white/5 z-50 ${propertyOpen ? 'opacity-100 visible translate-y-2' : 'opacity-0 invisible translate-y-0'}`}>
                   <li><Link to="/buy-property" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Buy Property</Link></li>
                   <li><Link to="/sell-property" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Sell Property</Link></li>
-                  <li><a href="https://ravmoyaanrealty.com/rent-property.php" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Rent Property</a></li>
+                  <li><Link to="/rent-property" className="block px-5 py-2.5 text-sm text-white/60 capitalize hover:text-gold-600 hover:bg-white/5 transition-all rounded-lg mx-1">Rent Property</Link></li>
                 </ul>
               </li>
               <li><Link to="/services" className="text-white/80 text-xs sm:text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors duration-300">Services</Link></li>
@@ -111,7 +111,7 @@ const Navbar = () => {
             <ul className="ml-4 mt-2 space-y-2">
               <li><Link to="/buy-property" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Buy Property</Link></li>
               <li><Link to="/sell-property" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Sell Property</Link></li>
-              <li><a href="https://ravmoyaanrealty.com/rent-property.php" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Rent Property</a></li>
+              <li><Link to="/rent-property" className="block py-2 text-sm text-white/50 hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Rent Property</Link></li>
             </ul>
           </li>
           <li><Link to="/services" className="text-white/80 text-sm font-medium uppercase tracking-wide hover:text-gold-600 transition-colors" onClick={() => setMobileOpen(false)}>Services</Link></li>

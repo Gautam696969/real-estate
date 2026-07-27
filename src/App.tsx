@@ -4,6 +4,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import BuyProperty from './pages/BuyProperty';
 import SellProperty from './pages/SellProperty';
+import RentProperty from './pages/RentProperty';
 import Gallery from './pages/Gallery';
 import Blogs from './pages/Blogs';
 import ContactPage from './pages/Contact';
@@ -16,6 +17,7 @@ function App() {
       <Route path="/services" element={<Services />} />
       <Route path="/buy-property" element={<BuyProperty />} />
       <Route path="/sell-property" element={<SellProperty />} />
+      <Route path="/rent-property" element={<RentProperty />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/blogs" element={<Blogs />} />
       <Route path="/contact" element={<ContactPage />} />
