@@ -24,7 +24,7 @@ function BuyProperty() {
     <div className="app-wrapper">
       <Navbar />
       <main>
-        <section className="breadcrumb-outer py-20 pt-32 relative overflow-hidden min-h-[500px]">
+        <section className="breadcrumb-outer py-20 pt-32 relative min-h-[500px]">
           <img src="https://ravmoyaanrealty.com/images/bg/home-171.jpg" alt="Buy Property Background" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-dark-200/10"></div>
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r "></div>
